@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Date de debut</th>
+                 <th>Date de fin</th>
+                  <th>Lieu</th> </tr>
+                  <tbody *ngFor="let sessionformation of sessionformations">
+                  <tr >
+
+                    <td>{{sessionformation.id}}</td>
+                    <td>{{sessionformation.datededebut}}</td>
+                    <td>{{sessionformation.datedefin}}</td>
+                    <td>{{sessionformation.lieu}}</td>
+                    <td><a class="btn btn-danger" (click)="supprimerSessionFormation(sessionformation)">Supprimer</a></td>
+                    <td><a class="btn btn-danger" (click)="inscriptionSessionFormation(sessionformation)">Inscription</a></td>
+                    <td><a class="btn btn-success" routerLink="['/updateSessionFormation',sessionformation.id']">Modifier</a></td>
+
+                    </tr>
+
+
+
+                </tbody>
+
+            </table>
+            </div>
+            </div>
+            </div>
+

@@ -1,0 +1,29 @@
+<div class="container">
+  <div>
+        <h2>Modifier une Formation :</h2>
+      </div>
+        <form >
+      <div hidden class="col-sm-2 col-md-2 col-lg-2">
+          <label >Nom Formation</label>
+       <input   type="text" [(ngModel)]="currentFormation.nom"
+        name="idFormation" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+       <label >Description</label>
+        <input type="text"[(ngModel)]= "currentFormation.description"
+         name="description" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Duree</label>
+        <input type="number" [(ngModel)]= "currentFormation.duree"
+        name="duree" class="form-control">
+      </div>
+
+
+    <div class="mt-2">
+    <button type="submit" (click)="UpdateFormation()" class="btn btn-success">Modifer</button>
+    </div>
+    </form>
+    </div>

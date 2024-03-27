@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+        <table class="table table-striped">
+          <tr>
+
+                        <th>Id</th>
+                            <th>Nom</th>
+                            <th>prenom</th>
+                            <th>Email</th>
+                          </tr>
+
+                            <tbody *ngFor="let utilisateur of utilisateurs">
+                            <tr >
+
+                                <td>{{utilisateur.id_utilisateur}}</td>
+                                <td>{{utilisateur.nom}}</td>
+                                <td>{{utilisateur.prenom}}</td>
+                                <td>{{utilisateur.email}}</td>
+                                <td><a class="btn btn-danger" (click)="supprimerUtilisateur(utilisateur)">Supprimer</a></td>
+                                <td><a class="btn btn-success" routerLink="['/updateUtilisateur',utilisateur.idUtilisateur']">Modifier</a></td>
+
+
+                            </tr>
+
+
+
+                        </tbody>
+                        </table>
+                        </div>
+                        </div>
+                        </div>

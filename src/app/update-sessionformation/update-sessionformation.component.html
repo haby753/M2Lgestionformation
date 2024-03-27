@@ -1,0 +1,35 @@
+<div class="container">
+  <div>
+        <h2>Modifier une Formation :</h2>
+      </div>
+        <form >
+      <div hidden class="col-sm-2 col-md-2 col-lg-2">
+          <label >ID </label>
+       <input readonly type="text" [(ngModel)]="currentSessionFormation.id"
+        name="idsessionformation" class="form-control">
+        </div>
+
+        <div hidden class="col-sm-4 col-md-4 col-lg-4" >
+       <label >ID </label>
+        <input readonly type="text"[(ngModel)]= "currentSessionFormation.id"
+         name="formation" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >DateDeDebut</label>
+        <input type="number" [(ngModel)]= "currentSessionFormation.datededebut"
+        name="datedebut" class="form-control">
+      </div>
+
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >DateDeFin</label>
+        <input type="number" [(ngModel)]= "currentSessionFormation.datedefin"
+        name="datedefin" class="form-control">
+      </div>
+
+
+    <div class="mt-2">
+    <button type="submit" (click)="UpdateSessionFormation()" class="btn btn-success">Modifer</button>
+    </div>
+    </form>
+    </div>

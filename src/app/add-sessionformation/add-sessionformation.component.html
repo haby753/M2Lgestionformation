@@ -1,0 +1,30 @@
+<p>add-sessionformation works!</p>
+
+<div class="container">
+    <div>
+    <h2>Ajouter une Salle :</h2>
+    </div>
+    <form >
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >datedebut</label>
+        <input type="text" [(ngModel)]= "newSessionFormation.datededebut" name="datedebut" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+          <label for="langue"></label>
+          <select id="langue" formControlName="formation" class="form-control">
+            <option *ngFor="let formation of formations" [value]="formation.id">{{ formation.description }}</option>
+          </select>
+          <select id="langue" formControlName="salle" class="form-control">
+            <option *ngFor="let salle of salles" [value]="salle.id_salle">{{ salle.nom_salle}}</option>
+          </select>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          <label >datedefin</label>
+          <input type="text" [(ngModel)]= "newSessionFormation.datedefin" class="form-control">
+          </div>
+        <div class="mt-2">
+        <button type="submit" (click)="AddSessionFormationComponent()"class="btn btn-success">Ajouter</button>
+        </div>
+        </form>
+</div>

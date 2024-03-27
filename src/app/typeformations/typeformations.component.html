@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+        <table class="table table-striped">
+<tr>
+            <th>Id</th>
+                <th>Libelle</th>
+                <th>Niveau</th>
+</tr>
+                <tbody *ngFor="let typeformation of typeformations">
+                <tr >
+                    <td>{{typeformation.id_typeformation}}</td>
+                    <td>{{typeformation.libelle}}</td>
+                    <td>{{typeformation.niveau}}</td>
+                    <td><a class="btn btn-danger" (click)="supprimerTypeFormation(typeformation)">Supprimer</a></td>
+                    <td><a class="btn btn-success" routerLink="['/updateTypeFormation',typeformation.id_typeformation']">Modifier</a></td>
+
+                    </tr>
+       </tbody>
+     </table>
+     </div>
+    </div>
+   </div>
